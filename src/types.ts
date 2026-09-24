@@ -8,4 +8,10 @@ export type MenuItem = {
   name: string;
   category: string;
   price: number;
+  id: string;
+};
+
+export type CartItem = {
+  item: MenuItem;
+  count: number;
 };

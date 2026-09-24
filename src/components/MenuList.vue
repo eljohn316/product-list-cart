@@ -12,6 +12,7 @@ const menu = [
     name: 'Waffle with Berries',
     category: 'Waffle',
     price: 6.5,
+    id: '514482f0-f89e-47e0-b7df-61b3a40146f9',
   },
   {
     image: {
@@ -22,7 +23,8 @@ const menu = [
     },
     name: 'Vanilla Bean Crème Brûlée',
     category: 'Crème Brûlée',
-    price: 7.0,
+    price: 7,
+    id: '70657fc1-98ee-4014-9b39-bb616fd497dc',
   },
   {
     image: {
@@ -33,7 +35,8 @@ const menu = [
     },
     name: 'Macaron Mix of Five',
     category: 'Macaron',
-    price: 8.0,
+    price: 8,
+    id: '5aff0531-a72f-4af8-aea6-8e070f707e43',
   },
   {
     image: {
@@ -45,6 +48,7 @@ const menu = [
     name: 'Classic Tiramisu',
     category: 'Tiramisu',
     price: 5.5,
+    id: 'd69b24c7-8458-46c0-9b10-13518643b06a',
   },
   {
     image: {
@@ -55,7 +59,8 @@ const menu = [
     },
     name: 'Pistachio Baklava',
     category: 'Baklava',
-    price: 4.0,
+    price: 4,
+    id: '93c0e4f1-2fa9-40fe-a242-61cb015ddab6',
   },
   {
     image: {
@@ -66,7 +71,8 @@ const menu = [
     },
     name: 'Lemon Meringue Pie',
     category: 'Pie',
-    price: 5.0,
+    price: 5,
+    id: 'a196219a-0fdb-4874-8838-d866c646f0be',
   },
   {
     image: {
@@ -78,6 +84,7 @@ const menu = [
     name: 'Red Velvet Cake',
     category: 'Cake',
     price: 4.5,
+    id: '33158913-4f0b-435c-8d2f-e46775e1e59d',
   },
   {
     image: {
@@ -89,6 +96,7 @@ const menu = [
     name: 'Salted Caramel Brownie',
     category: 'Brownie',
     price: 4.5,
+    id: '6dec2078-2917-4901-ab26-65e88bb00444',
   },
   {
     image: {
@@ -100,6 +108,7 @@ const menu = [
     name: 'Vanilla Panna Cotta',
     category: 'Panna Cotta',
     price: 6.5,
+    id: '48493e11-4954-4f85-8708-25e8690efd75',
   },
 ];
 </script>
@@ -108,11 +117,11 @@ const menu = [
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3 xl:flex-1">
     <MenuListItem
       v-for="item in menu"
-      :key="item.name"
+      :key="item.id"
+      :id="item.id"
       :image="item.image"
       :name="item.name"
       :category="item.category"
-      :price="item.price"
-    />
+      :price="item.price" />
   </div>
 </template>
