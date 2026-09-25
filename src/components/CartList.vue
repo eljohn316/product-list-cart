@@ -1,9 +1,17 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import { useCartStore } from '@/store/cart';
 import emptyCart from '@/assets/icons/illustration-empty-cart.svg';
 import CartListItem from '@/components/CartListItem.vue';
-import { useCartStore } from '@/store/cart';
+import OrderConfirmationModal from '@/components/OrderConfirmationModal.vue';
 
 const store = useCartStore();
+const open = ref(false);
+
+function startNewOrder() {
+  store.resetCart();
+  open.value = false;
+}
 </script>
 
 <template>
@@ -55,9 +63,12 @@ const store = useCartStore();
 
       <button
         type="button"
-        class="text-preset-3 bg-red hover:bg-red/95 mt-6 block w-full rounded-full p-4 text-center text-white">
+        class="text-preset-3 bg-red hover:bg-red/95 mt-6 block w-full rounded-full p-4 text-center text-white"
+        @click="open = true">
         Confirm Order
       </button>
+
+      <OrderConfirmationModal :open="open" @close="open = false" @new-order="startNewOrder" />
     </div>
   </div>
 </template>

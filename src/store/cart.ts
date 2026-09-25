@@ -61,6 +61,10 @@ export const useCartStore = defineStore('cart', () => {
     cartItems.value = cartItems.value.filter((cartItem) => cartItem.item.id !== item.id);
   }
 
+  function resetCart() {
+    cartItems.value = [];
+  }
+
   return {
     cartItems,
     totalCartItems,
@@ -70,5 +74,6 @@ export const useCartStore = defineStore('cart', () => {
     addCartItem,
     removeCartItem,
     removeCartItemFromCart,
+    resetCart,
   };
 });
