@@ -9,6 +9,10 @@ export const useCartStore = defineStore('cart', () => {
     cartItems.value.reduce((total, item) => total + item.count, 0),
   );
 
+  const totalCartAmount = computed(() =>
+    cartItems.value.reduce((total, cartItem) => cartItem.count * cartItem.item.price + total, 0),
+  );
+
   function findCartItembyId(id: string) {
     return cartItems.value.find((cartItem) => cartItem.item.id === id);
   }
@@ -53,12 +57,18 @@ export const useCartStore = defineStore('cart', () => {
     }
   }
 
+  function removeCartItemFromCart(item: MenuItem) {
+    cartItems.value = cartItems.value.filter((cartItem) => cartItem.item.id !== item.id);
+  }
+
   return {
     cartItems,
     totalCartItems,
+    totalCartAmount,
     findCartItembyId,
     isCartItemInCart,
     addCartItem,
     removeCartItem,
+    removeCartItemFromCart,
   };
 });
