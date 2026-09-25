@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { CartItem } from '@/types';
-import { getImageUrl } from '@/utils';
 
 const props = defineProps<CartItem>();
 </script>
@@ -8,7 +7,7 @@ const props = defineProps<CartItem>();
 <template>
   <div class="flex items-center gap-x-4 py-4 first:pt-0 last:pb-0">
     <img
-      :src="getImageUrl(props.item.image.thumbnail)"
+      :src="props.item.image.thumbnail"
       :alt="props.item.name"
       class="size-12 flex-none rounded-sm" />
     <div class="flex-1">

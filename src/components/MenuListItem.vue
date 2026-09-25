@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import MenuListItemButton from '@/components/MenuListItemButton.vue';
 import type { MenuItem } from '@/types';
-import { getImageUrl } from '@/utils';
 import { useCartStore } from '@/store/cart';
 
 const props = defineProps<MenuItem>();
@@ -11,17 +10,17 @@ const store = useCartStore();
 <template>
   <div>
     <img
-      :src="getImageUrl(props.image.mobile)"
+      :src="props.image.mobile"
       :alt="props.name"
       class="h-53 w-full rounded-lg border-2 object-cover md:hidden"
       :class="[store.isCartItemInCart(props.id) ? 'border-red' : 'border-transparent']" />
     <img
-      :src="getImageUrl(props.image.tablet)"
+      :src="props.image.tablet"
       :alt="props.name"
       class="hidden h-53 w-full rounded-lg border-2 object-cover md:block lg:hidden"
       :class="[store.isCartItemInCart(props.id) ? 'border-red' : 'border-transparent']" />
     <img
-      :src="getImageUrl(props.image.desktop)"
+      :src="props.image.desktop"
       :alt="props.name"
       class="hidden h-53 w-full rounded-lg border-2 object-cover lg:block"
       :class="[store.isCartItemInCart(props.id) ? 'border-red' : 'border-transparent']" />
