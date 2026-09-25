@@ -1,48 +1,49 @@
-# product-list-app
+# Frontend Mentor - Product list with cart solution
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Recommended IDE Setup
+## Table of contents
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Recommended Browser Setup
+## Overview
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### The challenge
 
-## Type Support for `.vue` Imports in TS
+Users should be able to:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-## Customize configuration
+### Screenshot
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+![](./screenshot.png)
 
-## Project Setup
+### Links
 
-```sh
-npm install
-```
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-### Compile and Hot-Reload for Development
+## My process
 
-```sh
-npm run dev
-```
+### Built with
 
-### Type-Check, Compile and Minify for Production
+- [Vue.js](https://vuejs.org/) - JS Framework
+- [TailwindCSS](https://tailwindcss.com/) - CSS Framework
+- [Pinia](https://pinia.vuejs.org/) - State management library for Vue
 
-```sh
-npm run build
-```
+## Author
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Website - [El John Bonga](https://eljohnbonga.vercel.app/)
+- Frontend Mentor - [@eljohn316](https://www.frontendmentor.io/profile/eljohn316)
